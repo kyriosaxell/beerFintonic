@@ -11,7 +11,6 @@ import com.example.fintonicbeer.databinding.ItemBeerBinding
 import com.example.fintonicbeer.model.Beer
 import com.example.fintonicbeer.view.BeerClickListener
 import com.example.fintonicbeer.view.ListFragmentDirections
-import kotlinx.android.synthetic.main.fragment_detail.view.*
 import kotlinx.android.synthetic.main.item_beer.view.*
 
 class BeerListAdapter(private val beerList: ArrayList<Beer>) :

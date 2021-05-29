@@ -5,4 +5,6 @@
     <string name="load_list_error">Ocurrió un error al cargar la lista</string>
     <string name="brewers_tips">Brewers tips (experts say)</string>
     <string name="str_abv">%s%%vol</string>
+    <string name="food_pairing">Food pairing</string>
+    <string name="detail_beer">Detail of beer</string>
 </resources>

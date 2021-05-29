@@ -1,7 +1,6 @@
 package com.example.fintonicbeer.viewmodel
 
 import android.app.Application
-import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
 import com.example.fintonicbeer.model.Beer
 import com.example.fintonicbeer.model.BeerDataBase
@@ -55,10 +54,12 @@ class ListViewModel(application: Application) : BaseViewModel(application) {
         launch {
             val beers = BeerDataBase(getApplication()).beerDAO().getAllBeers()
             beersRetrieved(beers)
-            Toast.makeText(getApplication(), "desde la DB :)", Toast.LENGTH_SHORT).show()
         }
     }
 
+    /**
+     * Makes request from service
+     */
     private fun fetchFromRemote() {
         loading.value = true
         disposable.add(
@@ -68,8 +69,6 @@ class ListViewModel(application: Application) : BaseViewModel(application) {
                 .subscribeWith(object : DisposableSingleObserver<List<Beer>>() {
                     override fun onSuccess(beersList: List<Beer>) {
                         storeBeersLocally(beersList)
-                        Toast.makeText(getApplication(), "desde la API :)", Toast.LENGTH_SHORT)
-                            .show()
                     }
 
                     override fun onError(e: Throwable) {
