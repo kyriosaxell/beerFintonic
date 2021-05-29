@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="beer"
+            type="com.example.fintonicbeer.model.Beer" />
+        <variable
+            name="listener"
+            type="com.example.fintonicbeer.view.BeerClickListener" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:onClick="@{listener::onBeerClicked}"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/Id"
+            android:text="@{String.valueOf(beer.uuid)}"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/imgView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:contentDescription="@string/app_name"
+            android:imageUrl="@{beer.imageUrl}"
+            android:padding="4dp" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="4dp">
+
+        <TextView
+            android:id="@+id/name"
+            style="@style/Titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{beer.beerName}" />
+
+        <TextView
+            android:id="@+id/tag_line"
+            style="@style/Texto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{beer.tagLine}" />
+    </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

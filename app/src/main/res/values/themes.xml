@@ -4,8 +4,8 @@
         <!-- Primary brand color. -->
         <item name="android:textColorPrimary">@color/primaryTextColor</item>
         <item name="colorPrimary">@color/primaryColor</item>
-        <item name="colorPrimaryVariant">@color/primaryLightColor</item>
-        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorPrimaryDark">@color/primaryLightColor</item>
+        <item name="colorAccent">@color/primaryDarkColor</item>
         <!-- Secondary brand color. -->
         <item name="android:textColorSecondary">@color/secondaryTextColor</item>
         <item name="colorSecondary">@color/secondaryColor</item>
@@ -13,6 +13,18 @@
         <item name="colorOnSecondary">@color/secondaryDarkColor</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+    </style>
+    <!-- Customize your theme here. -->
+    <style name="Titulo">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Texto">
+        <item name="android:textSize">14sp</item>
+        <item name="color">@color/black</item>
+    </style>
+    <style name="subTexto">
+        <item name="android:textSize">14sp</item>
     </style>
 </resources>

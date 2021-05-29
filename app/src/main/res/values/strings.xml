@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">FintonicBeer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="load_list_error">Ocurrió un error al cargar la lista</string>
+    <string name="brewers_tips">Brewers tips (experts say)</string>
+    <string name="str_abv">%s%%vol</string>
 </resources>
